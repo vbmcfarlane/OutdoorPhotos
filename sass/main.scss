@@ -8,12 +8,12 @@
 @import "base/utilities";
 
 @import "components/button";
+@import "components/card";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/story";
 
+@import "layout/grid";
 @import "layout/header";
 
-@import "pages/home";
-
-html {
-    //defines 1rem in code
-    font-size: 62.5%;
-}
+@import "pages/_home";

@@ -8,7 +8,7 @@
         border-radius: 5rem;
         transition: all .2s;
         position: relative;
-        font-size: 1.6rem;
+        font-size: $default-fontsize;
     }
     &:hover {
         transform: translateY(-.3rem);
@@ -34,6 +34,18 @@
             background-color: $color-white;
         }
     }
+
+    &--green {
+        background-color: $color-secondary-green-dark;
+        margin: 0 auto;  
+        opacity: 0.5;
+        color: $color-white;
+          
+
+        &::after{
+            background-color: $color-secondary-green-dark;
+        }
+    }
         
     &::after {
         content: "";
@@ -52,5 +64,30 @@
     animation: moveInBotton .5s ease-out  .75s; 
     animation-fill-mode: backwards;
     }
+}
 
+.btn-text {
+    &:link,
+    &:visited {
+    
+        font-size: $default-fontsize;
+        color:  $color-primary;;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: .1rem solid $color-primary;
+        padding: .3rem;
+        transition: all .2s;
+    }
+
+    &:hover{ 
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        transform: translateY(-2px);
+    }
+   
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.15);
+        transform: translateY(0);
+    }
 }
