@@ -7,9 +7,31 @@
 }
     
 html {
-    //defines 1rem in code
-    font-size: 62.5%;
-}
+     
+    font-size: 62.5%;  // 1 rem = 10px; 10px/16px = 62.5%
+
+   
+
+
+
+    @include screen-sizes(tab-land) { //width <900
+        font-size: 56.25%; //1 rem = 9px., 9px/16px = 56.25%
+    }
+
+    @include screen-sizes(tab-port) { // width <
+        font-size: 50%; // 1 rem = 8px, 8px/16px = 50%
+    }
+
+
+  @include screen-sizes(phone) {
+        font-size: 40%;  
+    }    //redundant as it's the same size as the tab-portrait size
+
+    @include screen-sizes(big-desktop) {
+        font-size: 75%;  //1 rem = 12px, 12px/16px = 75%
+    } 
+  
+}  
 
 body { box-sizing: border-box;
 }
