@@ -1,17 +1,25 @@
 .footer{
     background-color: $color-gray-dark-3;
     padding: 10rem 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: $color-gray-light-1;
+
+    @include screen-sizes(tab-port){
+        padding: 8rem 0;
+    }
 
     &__logo-box{
         text-align: center;
         margin-bottom: 8rem;
+
+        @include screen-sizes(tab-port){
+            margin-bottom: 6rem;
+        } 
     }
 
     &__logo{
         width: 15rem;
         height: auto;
-
     }
 
     &__navigation{
@@ -20,6 +28,12 @@
         border-top: 1px solid $color-gray-dark;
         padding: 2rem;
         display: inline-block;
+
+        @include screen-sizes(tab-port){
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+        } 
 
     }
 
@@ -60,7 +74,12 @@
         
         width: 80%;
         float: right;
-      
+        
+        @include screen-sizes(tab-port){
+            width: 100%;
+            text-align: center;
+            float: none;
+        } 
     }
 
     

@@ -10,10 +10,6 @@ html {
      
     font-size: 62.5%;  // 1 rem = 10px; 10px/16px = 62.5%
 
-   
-
-
-
     @include screen-sizes(tab-land) { //width <900
         font-size: 56.25%; //1 rem = 9px., 9px/16px = 56.25%
     }
@@ -22,9 +18,8 @@ html {
         font-size: 50%; // 1 rem = 8px, 8px/16px = 50%
     }
 
-
-  @include screen-sizes(phone) {
-        font-size: 40%;  
+   @include screen-sizes(phone) {
+        font-size: 50%;  
     }    //redundant as it's the same size as the tab-portrait size
 
     @include screen-sizes(big-desktop) {
@@ -34,4 +29,9 @@ html {
 }  
 
 body { box-sizing: border-box;
+    padding: 3rem;
+
+    @include screen-sizes(tab-port) { // remove white space from the phone size screen
+        padding: 0;
+    }
 }

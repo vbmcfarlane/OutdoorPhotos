@@ -24,6 +24,9 @@
 1800 + ===> Big desktop
 */
 
+//order of media query updates
+// Base + typography > general layout > grid > page layout > components
+
 @mixin screen-sizes ($breakpoint) {   
     
     @if $breakpoint == phone {

@@ -4,16 +4,20 @@
     backface-visibility: hidden;
     margin-bottom: 6rem;
 
+    
+
     &--main {
         display:block;
         font-size:4rem ;
         font-weight: 600;
         letter-spacing: .2rem ;
         color: #fff;
-        animation: moveInLeft 1s ease-out;
-        /*animation-name: moveInLeft; 
-        animation-duration: 1s; 
-        animation-timing-function: ease-out; */
+        animation: moveInLeft 1s ease-out;  
+
+        @include screen-sizes(phone) {
+            letter-spacing: 1rem;
+            font-family: 5rem;          
+        } 
         text-transform: uppercase;
     }
 
@@ -24,6 +28,11 @@
             letter-spacing:1.75 rem;
             color: whitesmoke;
             animation: moveInRight 1s ease-out;
+
+            @include screen-sizes(phone) {
+                letter-spacing: .5rem;       
+            } 
+
         /* animation-name: moveInRight; 
             animation-duration: 1s; 
             animation-delay: 6s;
@@ -43,6 +52,17 @@
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
+
+    @include screen-sizes(tab-port) {
+       // letter-spacing: 1rem;
+        font-size: 3rem;  
+    } 
+
+    @include screen-sizes(phone) {
+       // letter-spacing: 1rem;
+        font-size: 2.5rem;  
+    } 
+
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow:   .5rem 1rem 2rem rgba($color-black, .2);
@@ -55,7 +75,7 @@ body {
    /* font-size: 16px; */
     line-height: 1.7;
     color: $color-gray-dark;
-    padding: 3rem;
+   
     
 }
 
@@ -85,11 +105,16 @@ body {
 
 
 .heading-tertiary{
-    //padding-left:3rem;    
+     
     font-size: $default-fontsize;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include screen-sizes(phone) {
+        letter-spacing: 1rem;
+        font-size: 2rem;  
+    } 
 }
 
 .paragraph {

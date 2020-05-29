@@ -79,18 +79,31 @@
                         </p>
                         <a href="#" class="btn-text ">Learn More &rarr; </a>
                     </div>
-                    <div class="col-1-of-2"> image composition 
+                    <div class="col-1-of-2">  
                         <div class="composition">
-                            <img src="img/nat-1.jpg" 
-                            alt="Photo 1" 
-                            class="composition__photo composition__photo--p1">
-                            <img src="img/nat-2.jpg" 
-                            alt="Photo 2" 
-                            class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3.jpg" 
-                            alt="Photo 3" 
-                            class="composition__photo composition__photo--p3">
-                        
+
+                            <!--  browser chooses image based on width -->
+
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw,  (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 1" class="composition__photo composition__photo--p1"
+                            src="img/nat-1-large.jpg">
+
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw,  (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 2" class="composition__photo composition__photo--p2"
+                            src="img/nat-2-large.jpg">
+
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 20vw,  (max-width: 37.5em) 30vw, 300px"
+                            alt="Photo 3" class="composition__photo composition__photo--p3"
+                            src="img/nat-3-large.jpg">
+
+<!--
+                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                            <img src="img/nat-2.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                            <img src="img/nat-3.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+-->                       
                         </div>
                     </div>
                 </div>
@@ -173,7 +186,9 @@
                                                 <p class="card__price-only">Only</p>
                                                 <p class="card__price-value">$297</p>
                                             </div>
-                                            <a href="#popup" class ="btn btn--white">Book Now!</a>
+                                            <div class="u-center-text"> 
+                                                <a href="#popup" class ="btn btn--white">Book Now!</a>
+                                            </div>
                                         </div>
                                     </div> 
                                 </div>       
@@ -203,7 +218,9 @@
                                             <p class="card__price-only">Only</p>
                                             <p class="card__price-value">$497</p>
                                         </div>
-                                        <a href="#popup" class ="btn btn--white">Book Now!</a>
+                                        <div class="u-center-text"> 
+                                            <a href="#popup" class ="btn btn--white">Book Now!</a>
+                                        </div>
                                     </div>
                                 </div> 
                             </div>     
@@ -233,7 +250,9 @@
                                             <p class="card__price-only">Only</p>
                                             <p class="card__price-value">$897</p>
                                         </div>
-                                        <a href="#popup" class ="btn btn--white">Book Now!</a>
+                                        <div class="u-center-text"> 
+                                            <a href="#popup" class ="btn btn--white">Book Now!</a>
+                                        </div>
                                     </div>
                                 </div> 
                             </div>     
@@ -315,7 +334,7 @@
                                 <div class="row">
                                     <div class="u-margin-bottom-medium">   
                                         <h2 class="heading-secondary">
-                                            Start booking now!
+                                            Book now!
                                         </h2>
                                     </div> 
 
@@ -362,7 +381,18 @@
 <!--***************************************************************************************************** -->
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="Full Logo" class="footer__logo">
+
+                <!-- Art Direction -->
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"  
+                        media="(max-width: 37.5rem)">
+                    <img srcset="img/logo-green-2x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo" class="footer__logo"
+                    src="img/logo-green-2x.png">     
+
+                </picture>
+
+                <!-- utilizing html density switching-->
+              <!--   <img srcset="img/logo-green-2x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo" class="footer__logo">  -->
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -379,11 +409,7 @@
 
                 <div class="col-1-of-2">
                     <p class="footer__copyright">
-                        Built by <a href="https://github.com/vbmcfarlane?tab=repositories" target="_blank" class="footer__link" >
-                            vbmcfarlane  </a> following Jonas Schmedtman's 
-                            <a href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank" class="footer__link"> Advance CSS and SASS Online course </a>. 
-                            with a few minor changes.  Copyright &copy; Jonas Schmedtman's design.  
-                            Credit to the original creator/author, Jonas Schmedmann
+                        Built by <a href="https://github.com/vbmcfarlane?tab=repositories" target="_blank" class="footer__link" >vbmcfarlane  </a> following Jonas Schmedtman's <a href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank" class="footer__link"> Advance CSS and SASS Online course </a>. with minor changes.  Copyright &copy; Jonas Schmedtman's design.  Design credit Jonas Schmedmann
                     </p>
                 </div>
 
